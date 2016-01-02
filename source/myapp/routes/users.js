@@ -23,43 +23,43 @@ router.get('/signup', function(req, res, next) {
 	});
 });
 
-router.get('/signout', function(req, res, next) {
-	var query = new Parse.Query(Users);
-	qurey.equalTo("name", "홍길동");
-	query.equalTo("password", "12344321");
-	qurey.equalTo("isDelted", false);
-	query.find({
-		success: function(result) {
-			if(results.length === 0) {
-				return res.send('해당 유저가 없습니다');
-			}
-			var targetUser = results[0];
-			targetUser.set("isDeleted", true);
-			targetUser.save(null, {
-				success: function(savedUser) {
-					res.send('탈퇴: ' + savedIser.id);
-				},
-				error: function(user, error) {
-					res.send("Error: " + error.code + " " + error.message);
-				}
-			});
-		});
-	module.exports + router;
-			/*targetUser.destroy({
-				success: function(deletedUser) {
-					res.send('탈퇴:' +deletedUser.id);
-					}				
-			});
-		},
-		error: function(error) {
-			res.send("Error:" +error.code +" "+ error.message);
-		}
-	});
-});
+// router.get('/signout', function(req, res, next) {
+// 	var query = new Parse.Query(Users);
+// 	qurey.equalTo("name", "홍길동");
+// 	query.equalTo("password", "12344321");
+// 	qurey.equalTo("isDelted", false);
+// 	query.find({
+// 		success: function(result) {
+// 			if(results.length === 0) {
+// 				return res.send('해당 유저가 없습니다');
+// 			}
+// 			var targetUser = results[0];
+// 			targetUser.set("isDeleted", true);
+// 			targetUser.save(null, {
+// 				success: function(savedUser) {
+// 					res.send('탈퇴: ' + savedIser.id);
+// 				},
+// 				error: function(user, error) {
+// 					res.send("Error: " + error.code + " " + error.message);
+// 				}
+// 			});
+// 		});
+// 	module.exports + router;
+// 			/*targetUser.destroy({
+// 				success: function(deletedUser) {
+// 					res.send('탈퇴:' +deletedUser.id);
+// 					}				
+// 			});
+// 		},
+// 		error: function(error) {
+// 			res.send("Error:" +error.code +" "+ error.message);
+// 		}
+// 	});
+// });
 
-router.get('/find', function(req, res, next) {
-	res.send('respoond with a resource');
-});
+// router.get('/find', function(req, res, next) {
+// 	res.send('respoond with a resource');
+// });
 
 // router.get('/signout', function(req, res, next) {
 // 	res.send('respond with a resource');
