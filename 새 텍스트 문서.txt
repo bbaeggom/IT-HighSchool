@@ -7,3 +7,5 @@ parse.com - 유용한거
 원티드 (스타트업) - 채용
 
 https://github.com/jungseob86/ITHighSchool/blob/master/myapp/views/signup_bootstrap.html
+
+https://github.com/jungseob86/ITHighSchool
