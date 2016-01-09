@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title><%= title %></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Jquery core javascript -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>회원가입</h1>
+      </div>
+      <p class="lead">사용자 정보 입력</p>
+
+      <table class="table table-hover"> 
+        <thead> 
+          <tr><th>#</th><th>ObjectId</th><th>Name</th><th>Password</th><th>UpdatedAt</th><th>CreatedAt</th></tr> 
+        </thead> 
+        <tbody> 
+          <% for(var i=0; i<users.length; i++) { %>
+             <tr><th scope="row"><%= i+1 %></th><td><%= users[i].objectId %></td><td><%= users[i].name %></td><td><%= users[i].password %></td><td><%= users[i].updatedAt %></td><td><%= users[i].createdAt %></td> </tr> 
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>  
+
+  </body>
+</html>
+
